@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tabla de multiplicar</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+	<h1>Tabla de multiplicar</h1>
+
+	<form action="/tabla" method="post">
+		<label for="Tabla">Tabla</label>
+		<input type="text" id="numero" name="numero" required="true" value="<%=numero%>" />
+		<button type="submit">Calcular</button>
+	</form>
+
+	<% let res=0; for(con=0; con <=10; ++con){ res=numero * con; %>
+		<h3>
+			<%=numero%> * <%=con%> = <%=res%>
+		</h3>
+		<% } %>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Practica EJS</title>
+
+</head>
+
+<body>
+    <header>
+        <center>
+            <h1 style="color: rgb(27, 27, 133);">
+                <%=titulo%>
+                <center>
+                <img src="./img/logoUpsin.png" alt="">
+            </center>
+            </h1>
+            <h3 style="color: rgb(27, 27, 133);">
+                <%=nombre%>
+            </h3>
+            <h2 style="color: rgb(168, 29, 29);">
+                <%=grupo%>
+            </h2>
+        </center>
+
+    </header>
+    <center>
+        <div class="contenedor" padding-inline: 100px;">
+            <table border="1" class="table table-dark table-hover">
+                <tr>
+                    <th class="table-primary">Matricula :</th>
+                    <th class="table-warning">Nombre :</th>
+                    <th class="table-danger">Sexo :</th>
+                    <th class="table-success">Materias :</th>
+                </tr>
+                <!-- abrir -->
+                <% for(item of listado){%>
+
+                    <tr>
+                        <td>
+                            <%=item.matricula%>
+                        </td>
+                        <td>
+                            <%=item.nombre%>
+                        </td>
+                        <td>
+                            <%=item.sexo%>
+                        </td>
+                        <td>
+                            <%=item.materias%>
+                        </td>
+                    </tr>
+
+                    <% } %>
+                        <!-- cerrar for -->
+            </table>
+
+        </div>
+    </center>
+</body>
+
+</html>
